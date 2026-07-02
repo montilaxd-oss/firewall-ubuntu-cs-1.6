@@ -75,7 +75,7 @@ iptables -A INPUT -p icmp --icmp-type echo-request \
 # TCP LIBERADO
 # =========================
 
-for port in 22 2222 21 2121 80 443 8080 8888 3306 12679 38151; do
+for port in 22 2222 21 2121 80 443 8080 8888 3306 12679 12680 38151; do
     iptables -A INPUT -p tcp --dport $port -j ACCEPT
 done
 
