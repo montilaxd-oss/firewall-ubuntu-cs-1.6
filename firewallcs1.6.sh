@@ -21,7 +21,7 @@ iptables -Z
 ipset destroy autoban 2>/dev/null
 ipset destroy whitelist 2>/dev/null
 
-ipset create autoban hash:ip timeout 3600
+ipset create autoban hash:ip timeout 6000
 ipset create whitelist hash:ip
 
 # SUA WHITELIST
@@ -162,7 +162,8 @@ systemctl restart netfilter-persistent
 
 echo "========================================"
 echo "CS 1.6 HARDCORE PROTECTION UBUNTU ATIVA"
-echo "Autoban: 3600s"
+echo "Autoban: 6000"
+echo "Passive FTP"
 echo "Whitelist ativa"
 echo "Anti-spoof ativo"
 echo "Fragment drop ativo"
